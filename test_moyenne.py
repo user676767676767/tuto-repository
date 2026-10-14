@@ -8,6 +8,7 @@ from rich.console import Console
 from moyenne import moyenne
 import math
 
+
 def test_moyenne():
     """Vérifie le calcul de la moyenne de deux valeurs."""
     resultat = moyenne([10, 20])
@@ -24,8 +25,13 @@ def test_moyenne_liste_vide():
     try:
         moyenne([])
         assert False
-    except ValueError :
+    except ValueError:
         assert True
 
+
 if __name__ == "__main__":
-    Console().print(Markdown("Ce fichier ne doit pas être appelé directement, utiliser la commande `pytest`"))
+    Console().print(
+        Markdown(
+            "Ce fichier ne doit pas être appelé directement, utiliser la commande `pytest`"
+        )
+    )
